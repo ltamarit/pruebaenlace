@@ -11,4 +11,6 @@ RUN useradd -m -G sudo -s /bin/bash alumno
 RUN echo "alumno:alumno" | chpasswd
 RUN useradd -m -G sudo -s /bin/bash cliente
 RUN echo "cliente:cliente" | chpasswd
+RUN useradd -m -G sudo -s /bin/bash profe
+RUN echo "profe:profe" | chpasswd
 CMD ["/usr/sbin/sshd", "-D"]
